@@ -207,10 +207,17 @@
     <Content Include="Views\Default\PartialNavbar.cshtml" />
     <Content Include="Views\Default\PartialFeature.cshtml" />
     <Content Include="Views\Default\PartialAbout.cshtml" />
+    <Content Include="Views\Default\PartialMeetArtist.cshtml" />
+    <Content Include="Views\Default\PartialEventSchedule.cshtml" />
+    <Content Include="Views\Default\PartialTicket.cshtml" />
+    <Content Include="Views\Default\PartialContact.cshtml" />
+    <Content Include="Views\Default\PartialFooter.cshtml" />
+    <Content Include="Views\Default\PartialScript.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\FestavaArtist\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />

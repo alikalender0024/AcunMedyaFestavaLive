@@ -34,5 +34,29 @@ namespace AcunMedyaFestavaLive.Controllers
         {
             return PartialView();
         }
+        public PartialViewResult PartialMeetArtist()
+        {
+            return PartialView();
+        }
+        public PartialViewResult PartialEventSchedule()
+        {
+            return PartialView();
+        }
+        public PartialViewResult PartialTicket()
+        {
+            return PartialView();
+        }
+        public PartialViewResult PartialContact()
+        {
+            return PartialView();
+        }
+        public PartialViewResult PartialFooter()
+        {
+            return PartialView();
+        }
+        public PartialViewResult PartialScript()
+        {
+            return PartialView();
+        }
     }
 }
