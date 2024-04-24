@@ -1,4 +1,9 @@
-﻿<!doctype html>
+﻿
+@{
+    Layout = null;
+}
+
+<!doctype html>
 <html lang="en">
 
 @Html.Action("PartialHead", "Default")
@@ -10,12 +15,12 @@
         @Html.Action("PartialHeader", "Default")
 
         @Html.Action("PartialNavbar", "Default")
-
         @RenderBody()
 
     </main>
 
     @Html.Action("PartialFooter", "Default")
+
 
 </body>
 

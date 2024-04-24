@@ -8,7 +8,8 @@ using System.Web.Mvc;
 namespace AcunMedyaFestavaLive.Controllers
 {
     public class FestavaArtistController : Controller
-    {  
+    {
+        FestavaContext _festavaContext = new FestavaContext();
         public ActionResult ArtistList()
         {
             var result = _festavaContext.Artists.ToList();
