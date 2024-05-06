@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AcunMedyaFestavaLive.DataAccess.Context;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,7 +9,7 @@ namespace AcunMedyaFestavaLive.Controllers
 {
     public class DefaultController : Controller
     {
-        // GET: Default
+        FestavaContext _festavaContext = new FestavaContext();
         public ActionResult Index()
         {
             return View();
@@ -44,7 +45,8 @@ namespace AcunMedyaFestavaLive.Controllers
         }
         public PartialViewResult PartialTicket()
         {
-            return PartialView();
+            var result = _festavaContext.Tickets.ToList();
+            return PartialView(result);
         }
         public PartialViewResult PartialContact()
         {
