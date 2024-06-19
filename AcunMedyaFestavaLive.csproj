@@ -130,10 +130,12 @@
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\LayoutController.cs" />
     <Compile Include="Areas\Admin\Controllers\TicketController.cs" />
+    <Compile Include="Controllers\AuthController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\FestavaArtistController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="DataAccess\FestavaContext.cs" />
+    <Compile Include="DataAccess\UserDal.cs" />
     <Compile Include="Entities\Artist.cs" />
     <Compile Include="Entities\Feature.cs" />
     <Compile Include="Entities\OperationClaim.cs" />
@@ -3183,6 +3185,8 @@
     <Content Include="Templates\admin\LICENSE.md" />
     <Content Include="Templates\admin\package.json" />
     <Content Include="Templates\admin\README.md" />
+    <Content Include="Views\Auth\Register.cshtml" />
+    <Content Include="Views\Auth\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
