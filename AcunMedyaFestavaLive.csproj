@@ -142,12 +142,17 @@
     <Compile Include="Entities\Ticket.cs" />
     <Compile Include="Entities\User.cs" />
     <Compile Include="Entities\UserOperationClaim.cs" />
+    <Compile Include="Entities\UserTicket.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Migrations\202406192117376_Initialize.cs" />
     <Compile Include="Migrations\202406192117376_Initialize.Designer.cs">
       <DependentUpon>202406192117376_Initialize.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202406192340270_Added_Entities_UserTicketTBL.cs" />
+    <Compile Include="Migrations\202406192340270_Added_Entities_UserTicketTBL.Designer.cs">
+      <DependentUpon>202406192340270_Added_Entities_UserTicketTBL.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -3224,6 +3229,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202406192117376_Initialize.resx">
       <DependentUpon>202406192117376_Initialize.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202406192340270_Added_Entities_UserTicketTBL.resx">
+      <DependentUpon>202406192340270_Added_Entities_UserTicketTBL.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

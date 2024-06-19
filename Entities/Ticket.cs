@@ -8,7 +8,6 @@ namespace AcunMedyaFestavaLive.Entities
     public class Ticket
     {
         public int TicketID { get; set; }
-        public int UserID { get; set; }
         public int ArtistID { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }

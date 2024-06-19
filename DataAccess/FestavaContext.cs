@@ -13,6 +13,7 @@ namespace AcunMedyaFestavaLive.DataAccess.Context
         public DbSet<Feature> Features { get; set; }
         public DbSet<Ticket> Tickets { get; set; }
         public DbSet<User> Users { get; set; }
+        public DbSet<UserTicket> UserTickets { get; set; }
         public DbSet<OperationClaim> OperationClaims { get; set; }
         public DbSet<UserOperationClaim> UserOperationClaims { get; set; }
     }
