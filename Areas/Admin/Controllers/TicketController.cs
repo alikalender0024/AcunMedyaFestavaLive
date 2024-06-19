@@ -1,5 +1,6 @@
 ﻿using AcunMedyaFestavaLive.DataAccess.Context;
 using AcunMedyaFestavaLive.Entities;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -59,6 +60,13 @@ namespace AcunMedyaFestavaLive.Areas.Admin.Controllers
             result.TicketProperty6 = ticket.TicketProperty6;
             _festavaContext.SaveChanges();
             return RedirectToAction("TicketList");
+        }
+
+        [HttpGet]
+        public ActionResult TicketDetail(int ticketID)
+        {
+            var ticket = _festavaContext.Tickets.Find(ticketID);
+            return View(ticket);
         }
     }
 }

@@ -3,7 +3,7 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class InitialCreate : DbMigration
+    public partial class Initialize : DbMigration
     {
         public override void Up()
         {
@@ -14,6 +14,7 @@
                         ArtistID = c.Int(nullable: false, identity: true),
                         NameSurname = c.String(),
                         Description = c.String(),
+                        Description2 = c.String(),
                         Date = c.DateTime(nullable: false),
                         ImageUrl = c.String(),
                     })
@@ -32,10 +33,21 @@
                 .PrimaryKey(t => t.FeatureID);
             
             CreateTable(
+                "dbo.OperationClaims",
+                c => new
+                    {
+                        OperationClaimID = c.Int(nullable: false, identity: true),
+                        ClaimName = c.String(),
+                    })
+                .PrimaryKey(t => t.OperationClaimID);
+            
+            CreateTable(
                 "dbo.Tickets",
                 c => new
                     {
                         TicketID = c.Int(nullable: false, identity: true),
+                        UserID = c.Int(nullable: false),
+                        ArtistID = c.Int(nullable: false),
                         Title = c.String(),
                         Description = c.String(),
                         TicketProperty1 = c.String(),
@@ -48,11 +60,35 @@
                     })
                 .PrimaryKey(t => t.TicketID);
             
+            CreateTable(
+                "dbo.UserOperationClaims",
+                c => new
+                    {
+                        UserOperationClaimID = c.Int(nullable: false, identity: true),
+                        OperationClaimId = c.Int(nullable: false),
+                        UserId = c.Int(nullable: false),
+                    })
+                .PrimaryKey(t => t.UserOperationClaimID);
+            
+            CreateTable(
+                "dbo.Users",
+                c => new
+                    {
+                        UserID = c.Int(nullable: false, identity: true),
+                        ImageUrl = c.String(),
+                        UserName = c.String(),
+                        Password = c.String(),
+                    })
+                .PrimaryKey(t => t.UserID);
+            
         }
         
         public override void Down()
         {
+            DropTable("dbo.Users");
+            DropTable("dbo.UserOperationClaims");
             DropTable("dbo.Tickets");
+            DropTable("dbo.OperationClaims");
             DropTable("dbo.Features");
             DropTable("dbo.Artists");
         }

@@ -12,5 +12,8 @@ namespace AcunMedyaFestavaLive.DataAccess.Context
         public DbSet<Artist> Artists { get; set; }
         public DbSet<Feature> Features { get; set; }
         public DbSet<Ticket> Tickets { get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<OperationClaim> OperationClaims { get; set; }
+        public DbSet<UserOperationClaim> UserOperationClaims { get; set; }
     }
 }

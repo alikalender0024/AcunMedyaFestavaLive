@@ -10,7 +10,6 @@
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
-            ContextKey = "AcunMedyaFestavaLive.DataAccess.Context.FestavaContext";
         }
 
         protected override void Seed(AcunMedyaFestavaLive.DataAccess.Context.FestavaContext context)

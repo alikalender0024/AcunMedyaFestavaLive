@@ -128,6 +128,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\LayoutController.cs" />
     <Compile Include="Areas\Admin\Controllers\TicketController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\FestavaArtistController.cs" />
@@ -135,18 +136,16 @@
     <Compile Include="DataAccess\FestavaContext.cs" />
     <Compile Include="Entities\Artist.cs" />
     <Compile Include="Entities\Feature.cs" />
+    <Compile Include="Entities\OperationClaim.cs" />
     <Compile Include="Entities\Ticket.cs" />
     <Compile Include="Entities\User.cs" />
+    <Compile Include="Entities\UserOperationClaim.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202404240907330_InitialCreate.cs" />
-    <Compile Include="Migrations\202404240907330_InitialCreate.Designer.cs">
-      <DependentUpon>202404240907330_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202404240917307_Artist_Added_Property.cs" />
-    <Compile Include="Migrations\202404240917307_Artist_Added_Property.Designer.cs">
-      <DependentUpon>202404240917307_Artist_Added_Property.cs</DependentUpon>
+    <Compile Include="Migrations\202406192117376_Initialize.cs" />
+    <Compile Include="Migrations\202406192117376_Initialize.Designer.cs">
+      <DependentUpon>202406192117376_Initialize.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -182,6 +181,11 @@
     <Content Include="Areas\Admin\Views\Ticket\CreateTicket.cshtml" />
     <Content Include="Areas\Admin\Views\Ticket\UpdateTicket.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\_AdminLayout.cshtml" />
+    <Content Include="Areas\Admin\Views\Layout\PartialHead.cshtml" />
+    <Content Include="Areas\Admin\Views\Layout\PartialNavbar.cshtml" />
+    <Content Include="Areas\Admin\Views\Layout\PartialSidebar.cshtml" />
+    <Content Include="Areas\Admin\Views\Layout\PartialScript.cshtml" />
+    <Content Include="Areas\Admin\Views\Ticket\TicketDetail.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -3185,8 +3189,6 @@
     <Folder Include="Areas\Admin\Data\" />
     <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Models\" />
-    <Folder Include="Views\Calendar\" />
-    <Folder Include="Views\Ticket\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />
@@ -3216,11 +3218,8 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202404240907330_InitialCreate.resx">
-      <DependentUpon>202404240907330_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202404240917307_Artist_Added_Property.resx">
-      <DependentUpon>202404240917307_Artist_Added_Property.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202406192117376_Initialize.resx">
+      <DependentUpon>202406192117376_Initialize.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
